@@ -26,7 +26,8 @@ search.addWidgets([
     
     // The "item" template renders each movie
     item(hit, { html, components }) {
-      return html`
+      console.log('Found a movie:', hit); // This prints the data to your browser console
+    return `Found: ${hit.title}`,html
         <div class="movie-item" style="margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
           <h3 style="margin: 0; color: #004b88;">
             ${components.Highlight({ hit, attribute: 'title' })}
