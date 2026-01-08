@@ -29,27 +29,35 @@
     
     /* Styling the Algolia Search Box */
     #searchbox { margin-bottom: 20px; }
+    /* This targets the input field specifically */
     .ais-SearchBox-input {
-      padding: 12px;
-      border-radius: 4px 0 0 4px; /* Rounded on the left */
-      border: none;
-      width: 100%;
-      max-width: 500px;
-      font-size: 1.1rem;
+      background-color: white !important;
+      border: 2px solid var(--ca-blue) !important;
+      border-radius: 4px 0 0 4px !important;
+      padding: 15px !important;
+      font-size: 1.2rem !important;
+      box-shadow: none !important;
     }
     
+    /* This styles the yellow button */
     .ais-SearchBox-submit {
-      background-color: var(--ca-yellow);
-      border: none;
-      padding: 12px 20px;
-      border-radius: 0 4px 4px 0; /* Rounded on the right */
-      cursor: pointer;
+      background-color: var(--ca-yellow) !important;
+      border: 2px solid var(--ca-blue) !important;
+      border-left: none !important;
+      border-radius: 0 4px 4px 0 !important;
+      width: 60px !important;
+      cursor: pointer !important;
     }
     
-    .ais-SearchBox-submitIcon {
-      fill: var(--ca-blue);
-      width: 20px;
-      height: 20px;
+    /* This hides the default reset (X) and loading icons to keep it clean */
+    .ais-SearchBox-reset, .ais-SearchBox-loadingIndicator {
+      display: none !important;
+    }
+    
+    /* Ensures the form looks like a single bar */
+    .ais-SearchBox-form {
+      display: flex !important;
+      border-radius: 4px !important;
     }
 </style>
 <head>
