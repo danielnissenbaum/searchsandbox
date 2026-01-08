@@ -16,8 +16,41 @@
       margin: 0;
       padding: 0;
     }
+    
+    
+    /* Container for the search section */
     .search-container { max-width: 800px; margin: 50px auto; padding: 20px; }
+    .search-header {
+      background-color: var(--ca-blue);
+      padding: 40px 20px;
+      color: white;
+      text-align: center;
+    }
+    
+    /* Styling the Algolia Search Box */
     #searchbox { margin-bottom: 20px; }
+    .ais-SearchBox-input {
+      padding: 12px;
+      border-radius: 4px 0 0 4px; /* Rounded on the left */
+      border: none;
+      width: 100%;
+      max-width: 500px;
+      font-size: 1.1rem;
+    }
+    
+    .ais-SearchBox-submit {
+      background-color: var(--ca-yellow);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 0 4px 4px 0; /* Rounded on the right */
+      cursor: pointer;
+    }
+    
+    .ais-SearchBox-submitIcon {
+      fill: var(--ca-blue);
+      width: 20px;
+      height: 20px;
+    }
 </style>
 <head>
     <meta charset="UTF-8">
