@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    :root {
-      --ca-blue: #004b88;
-      --ca-yellow: #ffbf47;
-      --text-primary: #161616;
-      --ca-light-grey: #f3f3f3;
-      --ca-font: "Open Sans", Helvetica, Arial, sans-serif;
-    }
-
-    body {
-      font-family: var(--ca-font);
-      color: var(--text-primary);
-      background-color: white;
-      margin: 0;
-      padding: 0;
+    /* 1. The Container */
+    #searchbox {
+        max-width: 600px;
+        margin: 20px auto;
     }
     
-    
-    /* Container for the search section */
-    .search-container { max-width: 800px; margin: 50px auto; padding: 20px; }
-    .search-header {
-      background-color: var(--text-primary);
-      padding: 40px 20px;
-      color: white;
-      text-align: center;
-    }
-    
-    /* Styling the Algolia Search Box */
-    #searchbox { margin-bottom: 20px; }
-    /* This targets the input field specifically */
-    .ais-SearchBox-input {
-      background-color: white !important;
-      border: 2px solid var(--ca-blue) !important;
-      border-radius: 4px 0 0 4px !important;
-      padding: 15px !important;
-      font-size: 1.2rem !important;
-      box-shadow: none !important;
-    }
-    
-    /* This styles the yellow button */
-    .ais-SearchBox-submit {
-      background-color: var(--ca-yellow) !important;
-      border: 2px solid var(--ca-blue) !important;
-      border-left: none !important;
-      border-radius: 0 4px 4px 0 !important;
-      width: 60px !important;
-      cursor: pointer !important;
-    }
-    
-    /* This hides the default reset (X) and loading icons to keep it clean */
-    .ais-SearchBox-reset, .ais-SearchBox-loadingIndicator {
-      display: none !important;
-    }
-    
-    /* Ensures the form looks like a single bar */
+    /* 2. The Form Wrapper */
     .ais-SearchBox-form {
-      display: flex !important;
-      border-radius: 4px !important;
+        display: flex !important;
+        height: 50px;
+    }
+    
+    /* 3. The Input Field (The "Citizens Advice" White Box) */
+    input.ais-SearchBox-input {
+        flex-grow: 1;
+        border: 2px solid #004b88 !important; /* CA Blue */
+        border-right: none !important;
+        padding: 0 15px !important;
+        font-size: 18px !important;
+        outline: none;
+    }
+    
+    /* 4. The Search Button (The "Citizens Advice" Yellow Button) */
+    button.ais-SearchBox-submit {
+        width: 70px !important;
+        background-color: #ffbf47 !important; /* CA Yellow */
+        border: 2px solid #004b88 !important; /* CA Blue */
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Hide the default search icon if it's annoying, or style it blue */
+    .ais-SearchBox-submitIcon {
+        width: 20px;
+        height: 20px;
+        fill: #004b88 !important;
+    }
+    
+    /* Hide the "X" reset and loading spinner for now */
+    .ais-SearchBox-reset, .ais-SearchBox-loadingIndicator {
+        display: none !important;
     }
 </style>
 <head>
